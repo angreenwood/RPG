@@ -3,9 +3,8 @@ from Modules.Player import player
 from Modules.game import main_game_loop
 import os
 import sys
-database = Database()
 os.system('cls')
-
+database = Database()
 print('#' * 45)
 print('#           Welcome adventurer to           #')
 print("#                  Vanheart                 #")

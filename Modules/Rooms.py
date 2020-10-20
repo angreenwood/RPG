@@ -18,5 +18,5 @@ class Room():
     for row in rows:
       if row[0] == room:
         return row
-      else:
-        print("Error: Room not found.")
+    else:
+      print("Error: Room not found.")

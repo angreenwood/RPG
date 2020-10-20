@@ -9,6 +9,7 @@ class Player():
   cursor = connection.cursor()
 
   def __init__(self):
+    self.character_id = int()
     self.profession = str()
     self.hp = int()
     self.st = int()
@@ -31,6 +32,7 @@ class Player():
   def get_stats(self,character_id):
     for stat in self.cursor.execute('SELECT * FROM player'):
       if stat[0] == character_id:
+        self.character_id = stat[0]
         self.profession = stat[1]
         self.hp = stat[2]
         self.st = stat[3]
@@ -63,8 +65,30 @@ class Player():
 
 
 
-  def move(self):
+  def move(self,target_room):
     pass
-
+  
+  def get_save_data(self):
+    save_data = [
+    self.character_id,
+    self.profession,
+    self.hp,
+    self.st,
+    self.mp,
+    self.strength,
+    self.vitality,
+    self.knowledge,
+    self.luck,
+    self.wisdom,
+    self.courage,
+    self.agility,
+    self.sanity,
+    self.personality,
+    self.level,
+    self.experience,
+    self.is_dead,
+    self.room_id,
+    ]
+    return save_data
 
 player = Player()
