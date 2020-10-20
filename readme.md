@@ -23,6 +23,7 @@ TODO: add important package notes.
 ### Pip installs:
 #### On Windows:
 - pip install tabulate
+- pip install passlib
 
 ## Help
 For help in the set-up of this program, please e-mail Nash Greenwood at agreenwood0006@kctcs.edu
