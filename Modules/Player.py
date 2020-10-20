@@ -1,6 +1,9 @@
+# Imports
 import sqlite3
 from tabulate import tabulate
-
+from Modules.Rooms import Room
+# Object of room
+rooms = Room()
 class Player():
   connection = sqlite3.connect("game.db")
   cursor = connection.cursor()
@@ -54,7 +57,10 @@ class Player():
 
 
   def look(self):
-    pass
+    room_id = self.room_id
+    room_data = rooms.get_room(room_id)
+    print(room_data)
+
 
 
   def move(self):
